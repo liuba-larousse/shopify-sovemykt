@@ -1,0 +1,138 @@
+@import '~/css/variables.scss';
+
+.grid {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+padding: 0 2rem 5rem 2rem;
+margin-top: 10rem;
+    svg {
+        position: absolute;
+        z-index: -5;
+    }
+
+    svg:nth-child(1n) {
+        transform: translate(15%, 10vh) scale(2, 2);
+    }
+
+    svg:nth-child(2n) {
+        transform: translate(-15%, 110vh) scale(2, 2);
+    }
+
+    svg:nth-child(3n) {
+        transform: translate(15%, 210vh) scale(2, 2);
+    }
+
+    @media (min-width: 48em) {
+        svg {
+            min-width: 150rem;
+            min-height: 150rem;
+        }
+
+        svg:nth-child(1n) {
+            transform: translate(-30%, -50rem) scale(0.8, 0.8);
+        }
+
+        svg:nth-child(2n) {
+            transform: translate(25%, 10rem)scale(0.8, 0.8);
+        }
+
+        svg:nth-child(3n) {
+            transform: translate(-30%, 65rem)scale(0.8, 0.8);
+
+        }
+    }
+}
+
+.container {
+    min-height: 90vh;
+    height: fit-content;
+    display: grid;
+    margin-top: 10rem;
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+    grid-template-rows: minmax(40rem, fit-content) minmax(50rem, fit-content);
+    grid-template-areas:
+        "img"
+        "text"
+}
+
+.img_area {
+    grid-area: img;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 80px;
+    box-shadow: $shadow;
+    margin: 0 auto;
+}
+
+.text_area {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    color: $clr-text-black;
+    margin: 0 auto;
+    align-items: center;
+
+    h3 {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $clr-text-dark;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        line-height: 1.75;
+    }
+}
+
+.btn_buy{
+width: 30rem;
+}
+
+@media (min-width: 48em) {
+    .image {
+        height: 35rem;
+          width: 35rem;
+      }
+}
+
+
+@media (min-width: 62em) {
+    .container {
+        display: grid;
+        min-height: 50rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "text img";
+
+        &.container:nth-of-type(2n) {
+            grid-template-areas:
+                "img text";
+        }
+
+    }
+
+    .text_area {
+        grid-area: text;
+        align-items: center;
+        justify-content: center;
+      
+    }
+    
+    .image {
+      height: 40rem;
+        width: 40rem;
+    }
+
+}
