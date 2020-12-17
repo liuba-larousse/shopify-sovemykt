@@ -69,8 +69,8 @@
 }
 
 .buyer_init {
-  width: 8rem;
-  height: 8rem;
+  min-width: 8rem;
+  min-height: 8rem;
   border-radius: 50%;
   display: flex;
   background-color: $clr-main-accent;
@@ -104,17 +104,18 @@
 .product {
   display: flex;
   flex-direction: row;
+  margin-bottom: 1rem;
+
 }
 
 .product_img {
-  width: 8rem;
-  height: 8rem;
-  background-color: $clr-lines;
+  min-width: 8rem;
+  min-height: 8rem;
+border-radius: 15px;
 }
 
 .product_name {
   margin-left: 2rem;
-
   p:nth-child(1) {
     font-weight: 300;
   }
@@ -210,9 +211,9 @@
 .btn_expand {
   border-bottom:1px solid $clr-main-accent;
   color: $clr-main-accent;
-  background-color: white;
+  background-color: transparent;
   font-size: $font-h3;
-  font-weight: 100;
+  font-weight: 300;
   font-family: $font-secondary;
   text-transform: uppercase;
   margin: 2rem auto 0 auto;
@@ -329,8 +330,9 @@
 }
 
 .thumbnail{
-  width: 7rem;
-  height: 7rem;
+  min-width:  7rem;
+  min-height: 7rem;
+
 }
 
 // MODAL

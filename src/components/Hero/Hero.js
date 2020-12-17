@@ -10,7 +10,7 @@ export default function Hero() {
     <StaticQuery
       query={graphql`
         {
-          file(relativePath: { eq: "hero.jpg" }) {
+          file(relativePath: { eq: "hero2.jpg" }) {
             childImageSharp {
               fluid(fit: COVER, cropFocus: NORTHEAST) {
                 ...GatsbyImageSharpFluid

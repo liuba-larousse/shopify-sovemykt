@@ -97,7 +97,7 @@ export default function Reviews() {
           <div className={s.line}></div>
           <div className={s.product}>
             <div className={s.product_img}>
-              <Img fluid={fluid} />
+              <Img fluid={fluid} className={s.product_img} />
             </div>
             <div className={s.product_name}>
               <p>Reviewing</p>

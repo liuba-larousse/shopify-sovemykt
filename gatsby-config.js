@@ -81,9 +81,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-google-spreadsheet',
       options: {
-        spreadsheetId: '1alLcPR7xO2KtqWRvqxzzhTvLVgf97qexze1mnF57HdY',
-        // spreadsheetName: 'reviews',
-        typePrefix: 'GoogleSpreadsheet',
+        spreadsheetId: process.env.SPREADSHEET_ID,
+        // apiKey: process.env.GOOGLE_API_KEY,
+
         credentials: JSON.parse(
           `${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`
         ),

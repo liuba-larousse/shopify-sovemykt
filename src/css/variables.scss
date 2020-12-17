@@ -1,22 +1,23 @@
 /* Colors: */
 
-$clr-lines: #dadada;
+$clr-lines: #707070;
 $clr-text-grey: #707070;
 $clr-main-light: #f6f5f5;
-$clr-attention: #f7c767;
+$clr-attention: #fce691;
 $clr-attention-shade: darken($clr-attention, 10%);
 $clr-green: #7dcc59;
 $clr-red: #ff4949;
-$clr-main-accent: #28abb9;
-$clr-main-accent-shade: #69d3de;
-$clr-text-dark: #00334e;
+$clr-main-accent: #79BAEA;
+$clr-main-accent-shade:darken($clr-main-accent,10%) ;
+$clr-text-dark: #283138;
 $clr-text-black: #040911;
-$background: #145374;
+$overlay: #00000050;
+$background: #282828;
 $gold: #f3c623;
-$gradient: linear-gradient(0deg, #d1ecff 50%, #28abb9 100%);
-$gradient2: linear-gradient(0deg, #28abb9 20%, #00334e 100%);
-$gradient3:linear-gradient(30deg, lighten(#28abb9, 10%) 25%, lighten(#00334e, 5%) 100%);
-$gradient4: linear-gradient(30deg, lighten(#28abb9, 10%) 50%, lighten(#00334e, 5%) 100%);
+// $gradient: linear-gradient(0deg, #d1ecff 50%, #28abb9 100%);
+// $gradient2: linear-gradient(to bottom, #154277 0%,#576e71 30%,#e1c45e 70%,#b26339 100%);
+$gradient3:linear-gradient(to bottom, #58ace7 0%,#79BAEA 50%,#a4ceeb 100%);
+$gradient4: linear-gradient(to bottom, #58ace7 25%,#79BAEA 75%,#a4ceeb 100%);
 $transition: all 0.3s 0s ease;
 /* Fonts */
 

@@ -59,6 +59,7 @@ typings/
 .cache/
 public
 
+
 # Mac files
 .DS_Store
 
@@ -68,3 +69,9 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+
+# other
+credentials/
+resources/
+.vscode/

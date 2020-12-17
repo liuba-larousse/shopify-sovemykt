@@ -16,7 +16,7 @@ export default function SalesSection() {
       fragment: googleSpreadsheetPage {
         ...PageFields
       }
-      file(relativePath: { eq: "upsale.jpeg" }) {
+      file(relativePath: { eq: "two_products.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

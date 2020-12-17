@@ -14,8 +14,8 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: $background;
-    opacity: 0.5;
+    background: $overlay;
+    opacity: 1;
     position: absolute;
     z-index: 2;
 }
@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 10vh;
+   top: 25vh;
 
     h1,
     h2 {
@@ -38,14 +38,16 @@
         color: $clr-main-light;
         width: 90%;
         word-wrap: break-word;
+        margin-bottom: 1rem;
     }
 
     h1 {
-        font-style: italic;
-        font-size: 6rem;
+        color:$clr-main-accent;
+        font-size: 10rem;
     }
     h2 {
         font-weight: 300;
+        font-style: italic;
     }
 }
 
@@ -60,24 +62,10 @@
     }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 62em) {
     .container {
-        display: flex;
-        width: 30%;
-        height: 100vh;
-        margin-left: 10%;
-        height: 100vh;
-        flex-direction: column;
-        align-items: flex-start;
-
-        h1 {
-            text-align: left;
-        }
-
-        h2 {
-            text-align: justify;
-
-        }
+        top: 0vh;
+    
     }
 
 }

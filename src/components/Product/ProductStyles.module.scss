@@ -68,7 +68,7 @@ h2{
   font-size: $font-h2;
   text-align: center;
   margin: 1rem 0;
-  background-color: #fff;
+  background-color:transparent;
   cursor: pointer;
   width: fit-content;
   transition: all 0.1s ease;
@@ -83,7 +83,9 @@ h2{
   align-items: center;
 
   button {
+    background: transparent;
     margin-top: 0;
+   
   }
 }
 

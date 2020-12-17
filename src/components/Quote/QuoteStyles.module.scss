@@ -9,11 +9,22 @@ overflow:hidden;
     height: fit-content;
     padding: 5rem;
     width: 100%;
-    background: $clr-main-light;
     margin-top: 10rem;
     h1 {
         margin: auto auto;
-        color: $clr-text-dark;
+        color: $clr-attention;
+        z-index: 3;
     }
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: $overlay;
+    position: absolute;
+    z-index: 2;
 }
 
