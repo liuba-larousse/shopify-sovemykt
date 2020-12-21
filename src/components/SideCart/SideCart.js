@@ -38,7 +38,7 @@ function SideCart() {
   const { checkout, updateLineItem, removeLineItem } = React.useContext(
     CartContext
   )
-  console.log('checkout:', checkout)
+  // console.log('checkout:', checkout)
 
   // const moreThanOneItemInCart =
   //   checkout &&
@@ -61,11 +61,10 @@ function SideCart() {
   if (checkout) {
     checkout.lineItems.forEach(lineItem => {
       totalQuantity = totalQuantity + lineItem.quantity
-      console.log('lineItem quantity:', lineItem.quantity)
     })
   }
 
-  console.log('total quantity:', totalQuantity)
+  // console.log('total quantity:', totalQuantity)
 
   //loading
   const [isLoading, setLoading] = React.useState(true)
