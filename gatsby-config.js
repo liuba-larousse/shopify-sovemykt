@@ -85,7 +85,7 @@ module.exports = {
         // apiKey: process.env.GOOGLE_API_KEY,
 
         credentials: JSON.parse(
-          `${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`
+          JSON.stringify(`${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`)
         ),
         filterNode: () => true,
         mapNode: node => node,
