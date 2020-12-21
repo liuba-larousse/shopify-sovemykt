@@ -81,14 +81,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-google-spreadsheet',
       options: {
-        spreadsheetId: process.env.SPREADSHEET_ID,
+        spreadsheetId: '1_msuzOCuoxcv211ivo1JtTtomT0c-Bk64Pp3QRqXQ6g',
         // apiKey: process.env.GOOGLE_API_KEY,
-
-        credentials: JSON.parse(
-          JSON.stringify(`${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`)
-        ),
-        filterNode: () => true,
-        mapNode: node => node,
+        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS),
       },
     },
 
