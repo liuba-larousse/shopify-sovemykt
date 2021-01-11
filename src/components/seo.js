@@ -53,11 +53,13 @@ function SEO({ description, lang, meta, keywords, title, url, image, author }) {
               },
               {
                 property: `og:url`,
-                content: `metaUrl`,
+                content: metaUrl,
               },
               {
                 property: `og:image`,
-                content: metaImage,
+                content:
+                  metaImage |
+                  `https://sovemykt.me/static/289f9b66a5714b0c270a4252e86bd8ab/fa8c4/prod1.jpg`,
               },
             ]
               .concat(
