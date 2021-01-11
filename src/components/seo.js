@@ -14,7 +14,7 @@ function SEO({ description, lang, meta, keywords, title, url, image, author }) {
         const metaAuthor = author || data.site.siteMetadata.author
         const metaUrl = url || data.site.siteMetadata.url
         const metaImage = image || data.site.siteMetadata.image
-        const metaKeywords = keywords || ['snooze-pro', 'sleep-mask']
+
         return (
           <Helmet
             htmlAttributes={{
@@ -54,6 +54,10 @@ function SEO({ description, lang, meta, keywords, title, url, image, author }) {
               {
                 property: `og:url`,
                 content: `metaUrl`,
+              },
+              {
+                property: `og:image`,
+                content: metaImage,
               },
             ]
               .concat(

@@ -6,11 +6,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Snooze-Pro`,
+    title: `Sovemykt`,
     description: `Best sleep mask in the world`,
     url: `https://sovemykt.me/`,
     author: `@liuba.larousse`,
-    image: `/src/images/logo.png`,
+    image: `/src/images/ogimage.jpeg`,
   },
   plugins: [
     `gatsby-plugin-smoothscroll`,
