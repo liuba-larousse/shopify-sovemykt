@@ -10,7 +10,7 @@ module.exports = {
     description: `Best sleep mask in the world`,
     url: `https://sovemykt.me/`,
     author: `@liuba.larousse`,
-    image: `./src/images/ogimage.jpeg`,
+    image: `https://sovemykt.me/static/289f9b66a5714b0c270a4252e86bd8ab/fa8c4/prod1.jpg`,
   },
   plugins: [
     `gatsby-plugin-smoothscroll`,
