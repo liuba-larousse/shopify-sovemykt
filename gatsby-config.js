@@ -83,9 +83,8 @@ module.exports = {
       options: {
         spreadsheetId: '1_msuzOCuoxcv211ivo1JtTtomT0c-Bk64Pp3QRqXQ6g',
         // apiKey: process.env.GOOGLE_API_KEY,
-        credentials: JSON.parse(
-          `${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`
-        ),
+        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS),
+
         filterNode: () => true,
         mapNode: node => node,
       },

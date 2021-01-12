@@ -6,6 +6,12 @@ import { button_main } from '~/css/components.module.scss'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 export default function Hero() {
+  console.log(process.env.SHOP_NAME)
+  console.log(process.env.SHOPIFY_ACCESS_TOKEN)
+  console.log(process.env.FAUNADB_SECRET)
+  console.log(process.env.NETLIFY_BUILD_URL)
+  console.log(process.env.REACT_APP_MAILCHIMP_URL)
+  console.log(JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS))
   return (
     <StaticQuery
       query={graphql`

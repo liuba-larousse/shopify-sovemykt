@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import Client from 'shopify-buy'
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const client = Client.buildClient({
   domain: `${process.env.SHOP_NAME}.myshopify.com`,
   storefrontAccessToken: process.env.SHOPIFY_ACCESS_TOKEN,

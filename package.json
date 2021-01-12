@@ -38,7 +38,7 @@
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^2.3.37",
     "gatsby-source-google-spreadsheet": "^2.0.0",
-    "gatsby-source-shopify": "^3.3.2",
+    "gatsby-source-shopify": "^3.8.0",
     "gatsby-transformer-sharp": "^2.5.20",
     "gulp-sass": "^4.1.0",
     "isomorphic-fetch": "^3.0.0",
