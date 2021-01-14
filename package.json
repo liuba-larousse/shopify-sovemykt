@@ -72,11 +72,13 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
     "dev": "gatsby develop -H 192.168.1.68",
     "start": "npm run dev",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "build": "gatsby build GATSBY_ENV=production",
+    "develop": "gatsby develop GATSBY_ENV=development",
+    "staging": "gatsby develop GATSBY_ENV=staging"
   },
   "devDependencies": {
     "eslint": "^7.13.0",
