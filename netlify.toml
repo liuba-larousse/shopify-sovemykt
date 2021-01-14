@@ -1,7 +1,5 @@
-# Settings in the [build] context are global and are applied to all contexts
-# unless otherwise overridden by more specific contexts.
-[build]
-  # Directory to change to before starting a build.
+
+
 [build.environment]
 SHOP_NAME="sove-mykt"
 SHOPIFY_ACCESS_TOKEN="02d2ceb4ce49e4197b5e824c974e60c3"
