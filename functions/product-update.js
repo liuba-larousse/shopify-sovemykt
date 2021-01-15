@@ -4,12 +4,12 @@ const axios = require('axios')
 
 const q = faunadb.query
 const client = new faunadb.Client({
-  secret: process.env.FAUNADB_SECRET,
+  secret: process.env.GATSBY_FAUNADB_SECRET,
 })
 
 exports.handler = function(event, context, callback) {
   const isValid = verifyWebhookIntegrity(
-    process.env.SHOPIFY_WEBHOOK_KEY,
+    process.env.GATSBY_SHOPIFY_WEBHOOK_KEY,
     event.headers['x-shopify-hmac-sha256'],
     event.body
   )
@@ -38,7 +38,7 @@ exports.handler = function(event, context, callback) {
             )
             .then(() => {
               // call rebuild
-              axios.post(process.env.NETLIFY_BUILD_URL)
+              axios.post(process.env.GATSBY_NETLIFY_BUILD_URL)
             })
             .catch(e => {
               console.log('error updating product:', e)
@@ -54,7 +54,7 @@ exports.handler = function(event, context, callback) {
           )
           .then(() => {
             //call rebuild
-            axios.post(process.env.NETLIFY_BUILD_URL)
+            axios.post(process.env.GATSBY_NETLIFY_BUILD_URL)
           })
           .catch(e => {
             console.log('error adding to db:', e)
