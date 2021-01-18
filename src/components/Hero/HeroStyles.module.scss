@@ -1,71 +1,69 @@
 @import '~/css/variables.scss';
 
 .image {
-    width: 100%;
-    height: 100vh;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay {
-    width: 100%;
-    height: 100vh;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background: $overlay;
-    opacity: 1;
-    position: absolute;
-    z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: $overlay;
+  opacity: 1;
+  position: absolute;
+  z-index: 2;
 }
 
 .container {
-    overflow: hidden;
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    width: 100%;
-    height: 90vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   top: 25vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 25vh;
 
-    h1,
-    h2 {
-        text-align: center;
-        color: $clr-main-light;
-        width: 90%;
-        word-wrap: break-word;
-        margin-bottom: 1rem;
-    }
+  h1,
+  h2 {
+    text-align: center;
+    color: $clr-main-light;
+    width: 90%;
+    word-wrap: break-word;
+    margin-bottom: 1rem;
+  }
 
-    h1 {
-        color:$clr-main-accent;
-        font-size: 10rem;
-    }
-    h2 {
-        font-weight: 300;
-        font-style: italic;
-    }
+  h1 {
+    color: $clr-main-accent;
+    font-size: 10rem;
+  }
+  h2 {
+    font-weight: 400;
+    font-style: italic;
+  }
 }
 
 .button {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 @media (min-width: 32em) {
-    .container {
-        overflow: visible;
-    }
+  .container {
+    overflow: visible;
+  }
 }
 
 @media (min-width: 62em) {
-    .container {
-        top: 0vh;
-    
-    }
-
+  .container {
+    top: 0vh;
+  }
 }

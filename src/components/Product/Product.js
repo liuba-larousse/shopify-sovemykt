@@ -42,10 +42,18 @@ export default function Product() {
       <div className={s.carousel}>
         <Img className={s.image} fluid={fluid} />
         <div className={s.buttons}>
-          <button className={s.prev} onClick={() => handlePrevious()}>
+          <button
+            aria-label="show previous"
+            className={s.prev}
+            onClick={() => handlePrevious()}
+          >
             <HiArrowLeft />
           </button>
-          <button className={s.next} onClick={() => handleNext()}>
+          <button
+            aria-label="show next"
+            className={s.next}
+            onClick={() => handleNext()}
+          >
             <HiArrowRight />
           </button>
         </div>

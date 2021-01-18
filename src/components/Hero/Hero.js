@@ -32,7 +32,7 @@ export default function Hero() {
               <div className={s.container}>
                 <h1>{data.fragment.heroTitle}</h1>
                 <h2>{data.fragment.heroSubtitle}</h2>
-                <h2>{process.env.GATSBY_SHOP_NAME}</h2>
+
                 <button
                   onClick={() => scrollTo('#product')}
                   className={`${s.button} ${button_main}`}

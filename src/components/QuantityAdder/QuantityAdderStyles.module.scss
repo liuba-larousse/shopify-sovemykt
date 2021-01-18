@@ -1,58 +1,58 @@
 @import '~/css/variables.scss';
 
 .container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > div:first-child {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .input {
+    margin: 2rem 0;
+  }
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-secondary;
+    font-size: $font-h4;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  input[type='number'] {
+    width: 10rem;
+    height: 5rem;
+    font-size: 16px;
+    color: $clr-text-black;
+    border: 1px solid $clr-main-accent;
+    text-align: center;
+    outline: none;
+    margin-left: 2rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+    font-family: $font-secondary;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .btn_add {
+    color: $clr-main-light;
     margin-top: 2rem;
-    margin-bottom: 2rem;
-
-  
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        >div:first-child {
-            display: flex;
-            flex-direction: row;
-        }
+    width: 27rem;
+    background-color: $clr-green;
+    &:hover,
+    :focus {
+      background-color: darken($clr-green, 5%);
     }
-
-
-    .input{
-        margin: 2rem 0;
-    }
-
-    label {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: $font-secondary;
-        font-size: $font-h4;
-        font-weight: 100;
-    text-transform: uppercase;
-    }
-
-    input[type=number] {
-        width: 10rem;
-        height: 5rem;
-        font-size: 16px;
-        color: $clr-text-black;
-        border: 1px solid $clr-main-accent;
-        text-align: center;
-        outline: none;
-        margin-left: 2rem;
-        padding-left: 1rem;
-        border-radius: 10px;
-        font-family: $font-secondary;
-        font-weight: 300;
-    text-transform: uppercase;
-    }
-
-    .btn_add{
-        margin-top: 2rem;
-width: 27rem;
-background-color: $clr-green;
-&:hover, :focus{
-    background-color:darken($clr-green, 10%)
-}
-    }
+  }
 }

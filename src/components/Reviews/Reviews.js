@@ -206,6 +206,7 @@ export default function Reviews() {
                   onKeyDown={() => toggle(index)}
                   role="button"
                   tabIndex="0"
+                  aria-label="product image"
                 >
                   <Img
                     className={s.thumbnail}
