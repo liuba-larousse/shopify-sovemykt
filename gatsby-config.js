@@ -6,11 +6,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Sovemykt`,
-    description: `Best sleep mask in the world`,
+    title: `Sovemykt Spleemask Store`,
+    description: `Mock sleep mask store, Gatsby Storefront + Shopify buy button`,
     url: `https://sovemykt.me/`,
     author: `@liuba.larousse`,
-    image: `https://sovemykt.me/static/289f9b66a5714b0c270a4252e86bd8ab/fa8c4/prod1.jpg`,
+    image: `https://sovemykt.me/static/1c941d1ae089fd325d9890da3758698b/821bf/hero2.jpg`,
   },
   plugins: [
     `gatsby-plugin-smoothscroll`,

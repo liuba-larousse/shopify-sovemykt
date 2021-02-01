@@ -1,80 +1,53 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title, url, image, author }) {
+function SEO({ title }) {
+  const { site, description } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+            image
+            url
+          }
+        }
+      }
+    `
+  )
+
+  const metaDescription = site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
+  const metaImage = site.siteMetadata.image
+  const metaUrl = site.siteMetadata.url
+
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
-        const metaTitle = title || data.site.siteMetadata.title
-        const metaAuthor = author || data.site.siteMetadata.author
-        const metaUrl = url || data.site.siteMetadata.url
-        const metaImage = image || data.site.siteMetadata.image
+    <Helmet>
+      <title>{defaultTitle}</title>
+      <meta name="description" content={metaDescription} />
+      <meta name="image" content={metaUrl} />
 
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang,
-            }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            meta={[
-              {
-                name: `description`,
-                content: metaDescription,
-              },
-              {
-                name: `title`,
-                content: metaTitle,
-              },
-              {
-                name: `Author`,
-                content: metaAuthor,
-              },
-              {
-                name: `Url`,
-                content: metaUrl,
-              },
-              {
-                property: `og:title`,
-                content: title,
-              },
-              {
-                property: `og:description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:type`,
-                content: `website`,
-              },
-              {
-                property: `og:url`,
-                content: metaUrl,
-              },
-              {
-                property: `og:image`,
-                content:
-                  metaImage |
-                  `https://sovemykt.me/static/289f9b66a5714b0c270a4252e86bd8ab/fa8c4/prod1.jpg`,
-              },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
-              .concat(meta)}
-          />
-        )
-      }}
-    />
+      <link rel="canonical" href={metaUrl} />
+
+      {/* OpenGraph tags */}
+      <meta property="og:url" content={metaUrl} />
+
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={metaImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={metaImage} />
+    </Helmet>
   )
 }
 
@@ -85,25 +58,10 @@ SEO.defaultProps = {
 }
 
 SEO.propTypes = {
+  url: PropTypes.string,
   description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  image: PropTypes.string,
   title: PropTypes.string.isRequired,
 }
 
 export default SEO
-
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-        url
-        image
-      }
-    }
-  }
-`

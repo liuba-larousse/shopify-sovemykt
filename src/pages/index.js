@@ -20,7 +20,6 @@ const IndexPage = ({ data }) => {
     <>
       <SEO
         title={data.site.siteMetadata.title}
-        keywords={[`sleep-mask`]}
         descrpition={data.site.siteMetadata.description}
       />
       <Modal />
